@@ -1,0 +1,20 @@
+﻿<Window x:Class="Sweeper.MainWindow" x:Name="GameWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" MinWidth="350" Background="Beige" ResizeMode="NoResize">
+    <Grid>
+        <Label Content="H" Height="28" Width="19" HorizontalAlignment="Left" Margin="12,16,0,0" Name="H_label" VerticalAlignment="Top" />
+        <TextBox Text="{Binding Rows}" Height="23" Width="29" HorizontalAlignment="Left" Margin="37,18,0,0" Name="H_textBox" VerticalAlignment="Top" />
+        <Label Content="W" Height="28" HorizontalAlignment="Left" Margin="72,16,0,0" Name="W_label" VerticalAlignment="Top" Width="23" />
+        <TextBox Text="{Binding Cols}" Height="23" Width="29" HorizontalAlignment="Left" Margin="101,18,0,0" Name="W_textBox" VerticalAlignment="Top" />
+        <Button Content="Start" Height="40"  Width="40" Margin="0,12,0,0" Name="StartButton" VerticalAlignment="Top" Click="StartButtonClick" />
+        <Label Content="Mines" Height="28" Width="42" HorizontalAlignment="Right" Margin="0,16,47,0" Name="M_label" VerticalAlignment="Top" />
+        <TextBox Text="{Binding Mines}" Height="23" Width="29" HorizontalAlignment="Right" Margin="0,16,12,0" Name="M_textBox" VerticalAlignment="Top" />
+
+        <StackPanel Height="300" Margin="12,58,16,0" Name="MineGrid" VerticalAlignment="Top" >
+            <ItemsControl Name="MineGridSource" ItemsSource="{Binding GameGrid}"  />
+        </StackPanel>
+
+
+    </Grid>
+</Window>
